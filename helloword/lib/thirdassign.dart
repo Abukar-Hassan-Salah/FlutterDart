@@ -131,7 +131,10 @@ class MyApp extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Icon(Icons.grade_rounded),
+                      Icon(
+                        Icons.grade_rounded,
+                        color: Colors.grey,
+                      ),
                       SizedBox(width: 4.0),
                       Text(
                         'Rate Us',
