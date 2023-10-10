@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'ahmed',
+                'Profile',
                 style: TextStyle(fontSize: 25),
               ),
               IconButton(
