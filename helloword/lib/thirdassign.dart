@@ -133,7 +133,7 @@ class MyApp extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.grade_rounded,
-                        color: Colors.grey,
+                        // color: Colors.blue,
                       ),
                       SizedBox(width: 4.0),
                       Text(
