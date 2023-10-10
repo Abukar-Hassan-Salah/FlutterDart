@@ -70,7 +70,11 @@ class MyApp extends StatelessWidget {
                             fontSize: 14, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 217),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      )
                     ],
                   ),
                 ),
@@ -89,7 +93,11 @@ class MyApp extends StatelessWidget {
                             fontSize: 15, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 225),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      )
                     ],
                   ),
                   // end of the notification row
@@ -108,7 +116,11 @@ class MyApp extends StatelessWidget {
                             fontSize: 15, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 258),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      )
                     ],
                   ),
                 ),
@@ -127,7 +139,11 @@ class MyApp extends StatelessWidget {
                             fontSize: 15, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 270),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      )
                     ],
                   ),
                 ),
@@ -165,7 +181,11 @@ class MyApp extends StatelessWidget {
                             fontSize: 14, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 248),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      )
                     ],
                   ),
                 ),
@@ -184,7 +204,11 @@ class MyApp extends StatelessWidget {
                             fontSize: 14, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 227),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      )
                     ],
                   ),
                 ),
@@ -203,7 +227,11 @@ class MyApp extends StatelessWidget {
                             fontSize: 14, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 191),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      )
                     ],
                   ),
                 ),
@@ -222,7 +250,11 @@ class MyApp extends StatelessWidget {
                             fontSize: 14, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 220),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      )
                     ],
                   ),
                 ),
@@ -230,7 +262,7 @@ class MyApp extends StatelessWidget {
                 // the start of the sign in row
                 const SizedBox(height: 10.0),
                 const Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(9.0),
                   child: Row(
                     // mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -241,8 +273,12 @@ class MyApp extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(width: 270),
-                      Icon(Icons.arrow_forward_ios),
+                      SizedBox(width: 268),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 20,
+                        color: Colors.grey,
+                      ),
                     ],
                   ),
                 ),
