@@ -242,7 +242,7 @@ class MyApp extends StatelessWidget {
                             fontSize: 15, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 270),
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(Icons.arrow_forward_ios),
                     ],
                   ),
                 ),
