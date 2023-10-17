@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const LessonFive());
+}
+
 class LessonFive extends StatefulWidget {
   const LessonFive({super.key});
 

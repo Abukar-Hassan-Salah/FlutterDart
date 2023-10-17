@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const LessonFour());
+}
+
 class LessonFour extends StatefulWidget {
   const LessonFour({super.key});
 
@@ -152,7 +156,6 @@ class _LessonFourState extends State<LessonFour> {
             width: 20,
           ),
           FloatingActionButton(
-
             backgroundColor: Colors.red,
             onPressed: () {
               if (level > 0) {
