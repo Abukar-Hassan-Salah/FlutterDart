@@ -176,7 +176,7 @@ class MyApp extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Icon(Icons.lock_clock),
+                      Icon(Icons.info),
                       SizedBox(width: 10.0),
                       Text(
                         'About App',
@@ -245,7 +245,7 @@ class MyApp extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Icon(Icons.help),
+                      Icon(Icons.call),
                       SizedBox(width: 10.0),
                       Text(
                         'Help & Support',
