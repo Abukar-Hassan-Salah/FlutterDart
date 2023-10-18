@@ -12,7 +12,7 @@ class Assignment5 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Center(
+        title: const Center(
           child: Text(
             "CA208",
             style: TextStyle(color: Colors.black),
