@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        // scafold,drawer,floatbottom and floatnavigation bottom
         home: Scaffold(
       backgroundColor: Colors.blue[400],
       appBar: AppBar(
