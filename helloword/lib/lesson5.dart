@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const LessonFive());
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LessonFive(),
+    ),
+  );
 }
 
 class LessonFive extends StatefulWidget {

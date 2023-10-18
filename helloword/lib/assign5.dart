@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Assignment5());
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Assignment5(),
+    ),
+  );
 }
 
 class Assignment5 extends StatelessWidget {
