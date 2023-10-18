@@ -12,7 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(title: const Text('First Lesson Of Flutter')),
+      drawer: const Drawer(
+        child: Text('Menu App'),
+      ),
       body: const Center(child: Text("Welcome to Flutter!")),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        print(" + ");
+      }),
     ));
   }
 }
