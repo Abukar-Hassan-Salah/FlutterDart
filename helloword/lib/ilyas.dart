@@ -2,43 +2,171 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-      home: SafeArea(
-    child: Scaffold(
-        body: Text(
-      "Custom font",
-      style: TextStyle(fontSize: 30, fontFamily: "Pacifico"),
-    )),
-  )));
+  runApp(const LessonFour());
 }
 
-// Images
-// Center(
-// child:
-// Image(image: NetworkImage(""),)
-// Image(image: AssetImage("assets/images/pizza.png"),)
-// Image.network("")
-// Image.asset("assets/images/pizza.png", height: 300, width: 200,),
-// )
+class LessonFour extends StatefulWidget {
+  const LessonFour({super.key});
 
+  @override
+  State<LessonFour> createState() => _LessonFourState();
+}
 
-// Container
-// Container(
-// // margin: EdgeInsets.only(top: 15, left: 15),
-// margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
-// padding: EdgeInsets.all(30),
-// height: 100,
-// width: 100,
-// color: Colors.green,
-// transform: Matrix4.rotationZ(0.3),
-// child: Center(
-// child: Text("Some text", style: TextStyle(color: Colors.white),),
-// ),
-// )
+class _LessonFourState extends State<LessonFour> {
+  int level = 7;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 39, 68, 39),
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 39, 68, 39),
+        title: const Text("My Card"),
+        centerTitle: true,
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white, width: 3)),
+                child: const CircleAvatar(
+                  radius: 80,
+                  backgroundImage: AssetImage("assets/3.jpeg"),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          const Text(
+            "Name",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            "ahmed".toUpperCase(),
+            style: const TextStyle(color: Colors.white, fontSize: 25),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            "Phone",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            "+2526XXXXXXX".toUpperCase(),
+            style: const TextStyle(color: Colors.white, fontSize: 25),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            "E-mail",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              const Icon(Icons.email, color: Colors.white),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(
+                "ahmed@gmail.com".toUpperCase(),
+                style: const TextStyle(color: Colors.white, fontSize: 25),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            "Work",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              const Icon(Icons.work, color: Colors.white),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(
+                "Mobile Dev".toUpperCase(),
+                style: const TextStyle(color: Colors.white, fontSize: 25),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            "Level",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              const Icon(Icons.star, color: Colors.white),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(
+                "$level".toUpperCase(),
+                style: const TextStyle(color: Colors.white, fontSize: 25),
+              ),
+            ],
+          )
+        ],
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            backgroundColor: Colors.green,
+            onPressed: () {
+              level++;
 
-
-// Custom font
-// fonts:
-//   - family: Pacifico
-//   fonts:
-//     - asset: assets/fonts/Pacifico-Regular.ttf
+              setState(() {});
+            },
+            child: const Icon(Icons.add),
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+          FloatingActionButton(
+            backgroundColor: Colors.red,
+            onPressed: () {
+              if (level > 0) {
+                level--;
+                setState(() {});
+              }
+            },
+            child: const Icon(CupertinoIcons.minus),
+          )
+        ],
+      ),
+    );
+  }
+}
