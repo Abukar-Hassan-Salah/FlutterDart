@@ -17,27 +17,27 @@ class ScreenTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[300],
+      backgroundColor: Colors.blue,
       appBar: AppBar(
-        title: const Text('Shaashada Labaad'),
+        title: const Center(child: Text('Shaashada Labaad')),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              radius: 50,
+              radius: 80,
               backgroundImage: AssetImage(image),
             ),
             const SizedBox(height: 25),
             Text(
               name,
-              style: const TextStyle(fontSize: 20, color: Colors.black),
+              style: const TextStyle(fontSize: 20, color: Colors.white),
             ),
             const SizedBox(height: 16),
             Text(
               email,
-              style: const TextStyle(fontSize: 20, color: Colors.black),
+              style: const TextStyle(fontSize: 20, color: Colors.white),
             ),
           ],
         ),

@@ -19,14 +19,14 @@ class ScreenOne extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.pink,
       appBar: AppBar(
-        title: const Text('Shaashada Kowaad'),
+        title: const Center(child: Text('Shaashada Kowaad')),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const CircleAvatar(
-              radius: 50,
+              radius: 80,
               backgroundImage: AssetImage('assets/duur.jpg'),
             ),
             const SizedBox(height: 16),
