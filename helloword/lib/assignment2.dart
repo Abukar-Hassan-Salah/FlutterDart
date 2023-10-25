@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
         body: Column(
           children: [
             Image.asset(
-              'assets/duur.jpg',
+              'assets/Abukar.jpg',
               fit: BoxFit.cover,
               height: 200,
               width: 500,

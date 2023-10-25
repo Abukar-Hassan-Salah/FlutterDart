@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
                       border: Border.all(color: Colors.white, width: 3)),
                   child: const CircleAvatar(
                     backgroundImage: AssetImage(
-                      "assets/duur.jpg",
+                      "assets/Abukar.jpg",
                     ),
                   ),
                 ),

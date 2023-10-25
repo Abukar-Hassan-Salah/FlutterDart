@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
           Center(
               child: Image(
             fit: BoxFit.cover,
-            image: AssetImage("assets/duur.jpg"),
+            image: AssetImage("assets/Abukar.jpg"),
             height: 200,
             width: 500,
           )),

@@ -27,7 +27,7 @@ class ScreenOne extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 80,
-              backgroundImage: AssetImage('assets/duur.jpg'),
+              backgroundImage: AssetImage('assets/Abukar.jpg'),
             ),
             const SizedBox(height: 16),
             const Text(
@@ -51,7 +51,7 @@ class ScreenOne extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ScreenTwo(
-                      image: 'assets/duur.jpg',
+                      image: 'assets/Abukar.jpg',
                       name: 'Abukar Hassan Salah',
                       email: 'abukarhassansalah@gmail.com',
                       phone: '617436318',
