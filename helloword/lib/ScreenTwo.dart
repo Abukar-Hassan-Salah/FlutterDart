@@ -6,12 +6,14 @@ class ScreenTwo extends StatelessWidget {
   final String image;
   final String name;
   final String email;
+  final String phone;
 
   const ScreenTwo({
     super.key,
     required this.image,
     required this.name,
     required this.email,
+    required this.phone,
   });
 
   @override
@@ -37,6 +39,11 @@ class ScreenTwo extends StatelessWidget {
             const SizedBox(height: 16),
             Text(
               email,
+              style: const TextStyle(fontSize: 20, color: Colors.white),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              phone,
               style: const TextStyle(fontSize: 20, color: Colors.white),
             ),
           ],

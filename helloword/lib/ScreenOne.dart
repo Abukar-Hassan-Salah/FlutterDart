@@ -31,12 +31,17 @@ class ScreenOne extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             const Text(
-              'Abukar Hassan',
+              'Abukar Hassan Salah',
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
             const SizedBox(height: 20),
             const Text(
               'abukarhassansalah@gmail.com',
+              style: TextStyle(fontSize: 20, color: Colors.white),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              '617436318',
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
             const SizedBox(height: 20),
@@ -47,8 +52,9 @@ class ScreenOne extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => const ScreenTwo(
                       image: 'assets/duur.jpg',
-                      name: 'Abukar Hassan',
+                      name: 'Abukar Hassan Salah',
                       email: 'abukarhassansalah@gmail.com',
+                      phone: '617436318',
                     ),
                   ),
                 );
