@@ -5,7 +5,7 @@ void main() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WebView(),
+      // home: WebView(),
     ),
   );
 }
@@ -54,8 +54,10 @@ class _WebView extends State<WebView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Flutter WebView')),
-      body: SafeArea(child: WebViewWidget(controller: controller,))
-    );
+        appBar: AppBar(title: const Text('Flutter WebView')),
+        body: SafeArea(
+            child: WebViewWidget(
+          controller: controller,
+        )));
   }
 }
