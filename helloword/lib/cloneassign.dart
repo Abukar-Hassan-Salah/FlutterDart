@@ -82,9 +82,81 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 }
 
+class StatusScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Status'),
+      ),
+      body: Center(
+        child: Text('Status Screen'),
+      ),
+    );
+  }
+}
+
+class CallsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Calls'),
+      ),
+      body: Center(
+        child: Text('Calls Screen'),
+      ),
+    );
+  }
+}
+
+class SettingsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Settings'),
+      ),
+      body: Center(
+        child: Text('Settings Screen'),
+      ),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('WhatsApp Clone'),
+          bottom: TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.chat)),
+              Tab(icon: Icon(Icons.camera_alt)),
+              Tab(icon: Icon(Icons.call)),
+              Tab(icon: Icon(Icons.settings)),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            ChatScreen(),
+            StatusScreen(),
+            CallsScreen(),
+            SettingsScreen(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 void main() {
   runApp(MaterialApp(
     title: 'WhatsApp Clone',
-    home: ChatScreen(),
+    home: HomeScreen(),
   ));
 }
