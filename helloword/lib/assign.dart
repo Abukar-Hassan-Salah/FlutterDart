@@ -21,7 +21,7 @@ class _AssState extends State<Ass> {
         appBar: AppBar(
           title: const Text('Today Assignment'),
           centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 207, 164, 164)[870],
+          backgroundColor: Colors.grey[870],
           elevation: 0.0,
         ),
         body: Column(
@@ -37,24 +37,8 @@ class _AssState extends State<Ass> {
                     });
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.black),
-                  ),
-                  child: const Text(
-                    'Abukar',
-                    style: TextStyle(
-                      fontSize: 25.0,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    setState(() {
-                      selectedButton = 'Hassan';
-                    });
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.black),
+                    backgroundColor: MaterialStateProperty.all(
+                        Color.fromARGB(255, 200, 197, 197)),
                   ),
                   child: const Text(
                     'Abukar',
@@ -72,7 +56,25 @@ class _AssState extends State<Ass> {
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                        const Color.fromARGB(255, 58, 52, 52)),
+                        const Color.fromARGB(255, 193, 183, 183)),
+                  ),
+                  child: const Text(
+                    'Hassan',
+                    style: TextStyle(
+                      fontSize: 25.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    setState(() {
+                      selectedButton = 'Salah';
+                    });
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        Color.fromARGB(255, 143, 140, 140)),
                   ),
                   child: const Text(
                     'Salah',
@@ -89,7 +91,7 @@ class _AssState extends State<Ass> {
               margin: const EdgeInsets.all(20.0),
               padding: const EdgeInsets.all(20.0),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 242, 149, 149),
+                color: Color.fromARGB(255, 168, 157, 157),
                 borderRadius: BorderRadius.circular(12.0),
               ),
               width: double.infinity,
@@ -97,7 +99,7 @@ class _AssState extends State<Ass> {
               child: Text(
                 'Selected Name : $selectedButton',
                 style: const TextStyle(
-                  color: Color.fromARGB(255, 247, 244, 244),
+                  color: Color.fromARGB(255, 250, 250, 250),
                   fontSize: 20.0,
                 ),
               ),
