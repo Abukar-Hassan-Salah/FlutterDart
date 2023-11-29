@@ -99,10 +99,13 @@ class StatusScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 51, 44, 44),
+      backgroundColor: const Color.fromARGB(255, 51, 44, 44),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 51, 44, 44),
-        title: Text('Status'),
+        backgroundColor: const Color.fromARGB(255, 51, 44, 44),
+        title: const Text(
+          'Status',
+          style: TextStyle(color: Colors.green),
+        ),
       ),
       body: ListView(
         children: const [
@@ -112,8 +115,7 @@ class StatusScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/bakar.jpg'),
             ),
             title: Text('Abukar Hassan'),
-            subtitle: Text('Hello, sidee tahay?'),
-            trailing: Text('1:30 AM'),
+            subtitle: Text('Today, 5:30 AM'),
           ),
           ListTile(
             textColor: Colors.white,
@@ -121,8 +123,7 @@ class StatusScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/Abukar.jpg'),
             ),
             title: Text('Isse Hassan'),
-            subtitle: Text('Haa, fcn alx?'),
-            trailing: Text('1:50 AM'),
+            subtitle: Text('Today, 5:30 AM'),
           ),
           ListTile(
             textColor: Colors.white,
@@ -130,8 +131,7 @@ class StatusScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/Abukar.jpg'),
             ),
             title: Text('Daud Hassan'),
-            subtitle: Text('Hye, Intee joogtaa?'),
-            trailing: Text('11:30 PM'),
+            subtitle: Text('Today, 5:30 AM'),
           ),
           ListTile(
             textColor: Colors.white,
@@ -139,8 +139,7 @@ class StatusScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/bakar.jpg'),
             ),
             title: Text('Hassan Salah'),
-            subtitle: Text('Asc, wilkeyga soma wacnid?'),
-            trailing: Text('5:30 AM'),
+            subtitle: Text('Today, 5:30 AM'),
           ),
           ListTile(
             textColor: Colors.white,
@@ -148,8 +147,7 @@ class StatusScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/Abukar.jpeg.jpg'),
             ),
             title: Text('Abukar Hassan'),
-            subtitle: Text('Fcn, Aabbe ,adna soma wacnid?'),
-            trailing: Text('10:30 AM'),
+            subtitle: Text('Today, 5:30 AM'),
           ),
           ListTile(
             textColor: Colors.white,
@@ -159,8 +157,7 @@ class StatusScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/Abukar.jpg'),
             ),
             title: Text('Daud Hassan'),
-            subtitle: Text('Hye, Intee joogtaa?'),
-            trailing: Text('11:30 PM'),
+            subtitle: Text('Today, 5:30 AM'),
           ),
           ListTile(
             textColor: Colors.white,
@@ -168,8 +165,7 @@ class StatusScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/bakar.jpg'),
             ),
             title: Text('Hassan Salah'),
-            subtitle: Text('Asc, wilkeyga soma wacnid?'),
-            trailing: Text('5:30 AM'),
+            subtitle: Text('Today, 5:30 AM'),
           ),
 
           // Add more chat conversations here
@@ -186,7 +182,10 @@ class CallsScreen extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 105, 104, 104),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 96, 93, 93),
-        title: Text('Calls'),
+        title: Text(
+          'Calls',
+          style: TextStyle(color: Colors.green),
+        ),
       ),
       body: ListView(
         children: const [
@@ -285,19 +284,69 @@ class CallsScreen extends StatelessWidget {
 }
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-        title: Text('Settings'),
+        title: const Text(
+          'Settings',
+          style: TextStyle(color: Colors.green),
+        ),
       ),
-      body: const Center(
-        child: Text('Settings Screen'),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('Open Popup Menu'),
+          onPressed: () {
+            _showPopupMenu(context);
+          },
+        ),
       ),
     );
+  }
+
+  void _showPopupMenu(BuildContext context) {
+    final RenderBox button = context.findRenderObject() as RenderBox;
+    final RenderBox overlay =
+        Overlay.of(context)!.context.findRenderObject() as RenderBox;
+    final RelativeRect position = RelativeRect.fromRect(
+      Rect.fromPoints(
+        button.localToGlobal(Offset.zero, ancestor: overlay),
+        button.localToGlobal(button.size.bottomRight(Offset.zero),
+            ancestor: overlay),
+      ),
+      Offset.zero & overlay.size,
+    );
+
+    final List<PopupMenuEntry<String>> menuItems = [
+      const PopupMenuItem<String>(
+        value: 'New Group',
+        child: Text('New Group'),
+      ),
+      const PopupMenuItem<String>(
+        value: 'New Broadcast',
+        child: Text('New Broadcast'),
+      ),
+      const PopupMenuItem<String>(
+        value: 'Linked Device',
+        child: Text('Linked Device'),
+      ),
+      const PopupMenuItem<String>(
+        value: 'Started Message',
+        child: Text('Started Message'),
+      ),
+    ];
+
+    showMenu<String>(
+      context: context,
+      position: RelativeRect.fill,
+      items: menuItems,
+    ).then((value) {
+      if (value != null) {
+        // Handle selected option
+        print('Selected option: $value');
+      }
+    });
   }
 }
 
