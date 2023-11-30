@@ -29,45 +29,63 @@ class ChatScreen extends StatelessWidget {
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/bakar.jpg'),
             ),
-            title: Text('Abukar Hassan'),
-            subtitle: Text('Hello, sidee tahay?'),
-            trailing: Text('1:30 AM'),
+            title: Text('Abukar Hassan Hassan'),
+            subtitle: Text(
+              'Hello, sidee tahay?',
+              style: TextStyle(fontSize: 12),
+            ),
+            trailing: Text(
+              '1:30 AM',
+              style: TextStyle(color: Colors.green, fontSize: 10),
+            ),
           ),
           ListTile(
             textColor: Colors.white,
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/Abukar.jpg'),
             ),
-            title: Text('Isse Hassan'),
+            title: Text('Isse Hassan Salah', style: TextStyle(fontSize: 12)),
             subtitle: Text('Haa, fcn alx?'),
-            trailing: Text('1:50 AM'),
+            trailing: Text(
+              '1:50 AM',
+              style: TextStyle(color: Colors.green, fontSize: 10),
+            ),
           ),
           ListTile(
             textColor: Colors.white,
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/Abukar.jpg'),
             ),
-            title: Text('Daud Hassan'),
+            title: Text('Salah Hassan Salah', style: TextStyle(fontSize: 12)),
             subtitle: Text('Hye, Intee joogtaa?'),
-            trailing: Text('11:30 PM'),
+            trailing: Text(
+              '11:30 PM',
+              style: TextStyle(color: Colors.green, fontSize: 10),
+            ),
           ),
           ListTile(
             textColor: Colors.white,
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/bakar.jpg'),
             ),
-            title: Text('Hassan Salah'),
+            title: Text('Mohamud Hassan Salah', style: TextStyle(fontSize: 12)),
             subtitle: Text('Asc, wilkeyga soma wacnid?'),
-            trailing: Text('5:30 AM'),
+            trailing: Text(
+              '5:30 AM',
+              style: TextStyle(color: Colors.green, fontSize: 10),
+            ),
           ),
           ListTile(
             textColor: Colors.white,
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/Abukar.jpeg.jpg'),
             ),
-            title: Text('Abukar Hassan'),
+            title: Text('Abukar Hassan Salah', style: TextStyle(fontSize: 12)),
             subtitle: Text('Fcn, Aabbe ,adna soma wacnid?'),
-            trailing: Text('10:30 AM'),
+            trailing: Text(
+              '10:30 AM',
+              style: TextStyle(color: Colors.green, fontSize: 10),
+            ),
           ),
           ListTile(
             textColor: Colors.white,
@@ -76,18 +94,27 @@ class ChatScreen extends StatelessWidget {
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/Abukar.jpg'),
             ),
-            title: Text('Daud Hassan'),
+            title: Text('Daud Hassan Salah', style: TextStyle(fontSize: 12)),
             subtitle: Text('Hye, Intee joogtaa?'),
-            trailing: Text('11:30 PM'),
+            trailing: Text(
+              '11:30 PM',
+              style: TextStyle(color: Colors.green, fontSize: 10),
+            ),
           ),
           ListTile(
             textColor: Colors.white,
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/bakar.jpg'),
             ),
-            title: Text('Hassan Salah'),
+            title: Text('Hassan Salah  Ali', style: TextStyle(fontSize: 12)),
             subtitle: Text('Asc, wilkeyga soma wacnid?'),
-            trailing: Text('5:30 AM'),
+            trailing: Text(
+              '5:30 AM',
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 10,
+              ),
+            ),
           ),
 
           // Add more chat conversations here
