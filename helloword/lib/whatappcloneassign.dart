@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'WhatsApp Clone',
     home: HomeScreen(),
@@ -9,12 +9,14 @@ void main() {
 }
 
 class ChatScreen extends StatelessWidget {
+  const ChatScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 51, 44, 44),
+      backgroundColor: const Color.fromARGB(255, 51, 44, 44),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 54, 53, 53),
+        backgroundColor: const Color.fromARGB(255, 54, 53, 53),
         title: const Text(
           'Chats',
           style: TextStyle(color: Colors.green),
@@ -96,6 +98,8 @@ class ChatScreen extends StatelessWidget {
 }
 
 class StatusScreen extends StatelessWidget {
+  const StatusScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -176,13 +180,15 @@ class StatusScreen extends StatelessWidget {
 }
 
 class CallsScreen extends StatelessWidget {
+  const CallsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 105, 104, 104),
+      backgroundColor: const Color.fromARGB(255, 105, 104, 104),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 96, 93, 93),
-        title: Text(
+        backgroundColor: const Color.fromARGB(255, 96, 93, 93),
+        title: const Text(
           'Calls',
           style: TextStyle(color: Colors.green),
         ),
@@ -284,6 +290,8 @@ class CallsScreen extends StatelessWidget {
 }
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -309,6 +317,7 @@ class SettingsScreen extends StatelessWidget {
     final RenderBox button = context.findRenderObject() as RenderBox;
     final RenderBox overlay =
         Overlay.of(context)!.context.findRenderObject() as RenderBox;
+    // ignore: unused_local_variable
     final RelativeRect position = RelativeRect.fromRect(
       Rect.fromPoints(
         button.localToGlobal(Offset.zero, ancestor: overlay),
@@ -344,6 +353,7 @@ class SettingsScreen extends StatelessWidget {
     ).then((value) {
       if (value != null) {
         // Handle selected option
+        // ignore: avoid_print
         print('Selected option: $value');
       }
     });
@@ -351,6 +361,8 @@ class SettingsScreen extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -358,7 +370,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-          title: Text('WhatsApp Clone'),
+          title: const Text('WhatsApp Clone'),
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.chat)),
