@@ -8,7 +8,12 @@ void main() {
   ));
 }
 
-class ChatScreen extends StatelessWidget {
+
+class MyCard extends StatelessWidget {
+  const MyCard({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
