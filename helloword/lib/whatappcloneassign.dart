@@ -380,7 +380,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             ChatScreen(),
             StatusScreen(),
