@@ -177,7 +177,7 @@ class StatusScreen extends StatelessWidget {
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/Abukar.jpeg.jpg'),
             ),
-            title: Text('Abukar Hassan'),
+            title: Text('Abukar Hassan Salah'),
             subtitle: Text('Today, 5:30 AM'),
           ),
           ListTile(
