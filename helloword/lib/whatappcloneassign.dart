@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: 'WhatsApp Clone',
+    title: 'WhatsApp',
     home: HomeScreen(),
   ));
 }
@@ -397,7 +397,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-          title: const Text('WhatsApp Clone'),
+          title: const Text('WhatsApp'),
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.chat)),
