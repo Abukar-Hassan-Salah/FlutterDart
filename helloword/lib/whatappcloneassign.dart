@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'whatshome.dart';
+
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'WhatsApp',
     home: HomeScreen(),
@@ -15,13 +17,6 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 54, 53, 53),
-        title: const Text(
-          'Chats',
-          style: TextStyle(color: Colors.green),
-        ),
-      ),
       body: ListView(
         children: const [
           ListTile(
@@ -131,13 +126,6 @@ class StatusScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-        title: const Text(
-          'Status',
-          style: TextStyle(color: Colors.green),
-        ),
-      ),
       body: ListView(
         children: const [
           ListTile(
@@ -145,8 +133,14 @@ class StatusScreen extends StatelessWidget {
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/bakar.jpg'),
             ),
-            title: Text('Abukar Hassan'),
-            subtitle: Text('Today, 5:30 AM'),
+            title: Text('My status'),
+            subtitle: Text('Tap to add status update'),
+          ),
+          ListTile(
+            title: Text(
+              "Recent updates",
+              style: TextStyle(color: Colors.grey),
+            ),
           ),
           ListTile(
             textColor: Colors.white,
@@ -212,16 +206,26 @@ class CallsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 105, 104, 104),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 96, 93, 93),
-        title: const Text(
-          'Calls',
-          style: TextStyle(color: Colors.green),
-        ),
-      ),
+      backgroundColor: const Color.fromARGB(255, 51, 44, 44),
       body: ListView(
         children: const [
+          ListTile(
+            textColor: Color.fromARGB(255, 255, 255, 255),
+            leading: CircleAvatar(
+              backgroundImage: AssetImage('assets/bakar.jpg'),
+            ),
+            title: Text('Create call link'),
+            subtitle: Text(
+              'Share link for your whatsapp call',
+              style: TextStyle(color: Colors.grey),
+            ),
+          ),
+          ListTile(
+            title: Text(
+              "Recent ",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
           ListTile(
             textColor: Colors.white,
             leading: CircleAvatar(
@@ -311,56 +315,6 @@ class CallsScreen extends StatelessWidget {
 
           // Add more chat conversations here
         ],
-      ),
-    );
-  }
-}
-
-
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-        
-          actions: const [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Icon(Icons.camera_alt),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Icon(Icons.search),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Icon(Icons.more_vert),
-            ),
-          ],
-          backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-          title: const Text('WhatsApp'),
-          bottom: const TabBar(
-            tabs: [
-              Tab(icon: Icon(Icons.chat)),
-              Tab(icon: Icon(Icons.camera_alt)),
-              Tab(icon: Icon(Icons.call)),
-              // Tab(icon: Icon(Icons.public)),
-            ],
-          ),
-        ),
-        body: const TabBarView(
-          children: [
-            ChatScreen(),
-            StatusScreen(),
-            CallsScreen(),
-            // SettingsScreen(),
-          ],
-        ),
       ),
     );
   }
