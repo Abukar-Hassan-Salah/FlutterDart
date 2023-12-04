@@ -112,8 +112,21 @@ class ChatScreen extends StatelessWidget {
               ),
             ),
           ),
-
-          // Add more chat conversations here
+          ListTile(
+            textColor: Colors.white,
+            leading: CircleAvatar(
+              backgroundImage: AssetImage('assets/Abukar.jpg'),
+            ),
+            title: Text('Jamal Salah  Ali', style: TextStyle(fontSize: 12)),
+            subtitle: Text('Asc, wilkeyga soma wacnid?'),
+            trailing: Text(
+              '5:30 AM',
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 10,
+              ),
+            ),
+          ),
         ],
       ),
     );
