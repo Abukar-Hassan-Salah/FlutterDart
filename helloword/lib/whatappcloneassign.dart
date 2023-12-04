@@ -316,76 +316,7 @@ class CallsScreen extends StatelessWidget {
   }
 }
 
-// class SettingsScreen extends StatelessWidget {
-//   const SettingsScreen({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-//         title: const Text(
-//           'Settings',
-//           style: TextStyle(color: Colors.green),
-//         ),
-//       ),
-//       body: Center(
-//         child: ElevatedButton(
-//           child: const Text('Open Popup Menu'),
-//           onPressed: () {
-//             _showPopupMenu(context);
-//           },
-//         ),
-//       ),
-//     );
-//   }
-
-//   void _showPopupMenu(BuildContext context) {
-//     final RenderBox button = context.findRenderObject() as RenderBox;
-//     final RenderBox overlay =
-//         Overlay.of(context).context.findRenderObject() as RenderBox;
-//     // ignore: unused_local_variable
-//     final RelativeRect position = RelativeRect.fromRect(
-//       Rect.fromPoints(
-//         button.localToGlobal(Offset.zero, ancestor: overlay),
-//         button.localToGlobal(button.size.bottomRight(Offset.zero),
-//             ancestor: overlay),
-//       ),
-//       Offset.zero & overlay.size,
-//     );
-
-//     final List<PopupMenuEntry<String>> menuItems = [
-//       const PopupMenuItem<String>(
-//         value: 'New Group',
-//         child: Text('New Group'),
-//       ),
-//       const PopupMenuItem<String>(
-//         value: 'New Broadcast',
-//         child: Text('New Broadcast'),
-//       ),
-//       const PopupMenuItem<String>(
-//         value: 'Linked Device',
-//         child: Text('Linked Device'),
-//       ),
-//       const PopupMenuItem<String>(
-//         value: 'Started Message',
-//         child: Text('Started Message'),
-//       ),
-//     ];
-
-//     showMenu<String>(
-//       context: context,
-//       position: RelativeRect.fill,
-//       items: menuItems,
-//     ).then((value) {
-//       if (value != null) {
-//         // Handle selected option
-//         // ignore: avoid_print
-//         print('Selected option: $value');
-//       }
-//     });
-//   }
-// }
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
