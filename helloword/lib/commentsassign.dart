@@ -25,9 +25,12 @@ class TikTokCommentClone extends StatefulWidget {
 
 class _TikTokCommentCloneState extends State<TikTokCommentClone> {
   List<Comment> comments = [
-    Comment(username: 'user1', comment: 'Great video!'),
-    Comment(username: 'user2', comment: 'I love this!'),
-    Comment(username: 'user3', comment: 'Awesome content!'),
+    Comment(username: 'Abukar Hassan', comment: 'waa muqaal fcn!'),
+    Comment(username: 'Isse Hassan', comment: 'waan ka heley muqaalka!'),
+    Comment(username: 'Daud Hassan', comment: 'ka fogow waa halisee'),
+    Comment(username: 'Ali Hassan', comment: 'waa muqaal fcn!'),
+    Comment(username: 'Mohamed Hassan', comment: 'waan ka heley muqaalka!'),
+    Comment(username: 'Isack Hassan', comment: 'ka fogow waa halisee'),
   ];
 
   TextEditingController _commentController = TextEditingController();
@@ -38,6 +41,11 @@ class _TikTokCommentCloneState extends State<TikTokCommentClone> {
       if (commentText.isNotEmpty) {
         Comment newComment =
             Comment(username: 'Abukar Hassan Salah', comment: commentText);
+        Comment(username: 'Isse Hassan Salah', comment: commentText);
+        Comment(username: 'Daud Hassan Salah', comment: commentText);
+        Comment(username: 'Ali Hassan Salah', comment: commentText);
+        Comment(username: 'Mohamed Hassan Salah', comment: commentText);
+        Comment(username: 'Isack Hassan Salah', comment: commentText);
         comments.add(newComment);
         _commentController.clear();
       }
@@ -83,11 +91,44 @@ class _TikTokCommentCloneState extends State<TikTokCommentClone> {
     });
   }
 
+  void _showEmojiBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: 200,
+          child: GridView.count(
+            crossAxisCount: 8,
+            children: List.generate(
+              32,
+              (index) {
+                return IconButton(
+                  icon: Text(String.fromCharCode(0x1F600 + index),
+                      style: TextStyle(fontSize: 20)),
+                  onPressed: () {
+                    // Handle emoji selection
+                    // Add your code here
+                  },
+                );
+              },
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tik Tok Comments'),
+        elevation: 0,
+        backgroundColor: Colors.white,
+        title: const Center(
+            child: Text(
+          '666 Comments',
+          style: TextStyle(color: Colors.black),
+        )),
       ),
       body: Column(
         children: [
@@ -149,6 +190,10 @@ class _TikTokCommentCloneState extends State<TikTokCommentClone> {
                       hintText: 'Add a comment...',
                     ),
                   ),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.emoji_emotions),
+                  onPressed: _showEmojiBottomSheet,
                 ),
                 IconButton(
                   icon: const Icon(Icons.send),
