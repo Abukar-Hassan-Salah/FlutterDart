@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'whatshome.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'WhatsApp',
     home: HomeScreen(),
