@@ -44,7 +44,7 @@ class _TikTokCommentSectionState extends State<TikTokCommentSection> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Comments'),
+        title: const Text('Comments'),
       ),
       body: Column(
         children: [
@@ -75,7 +75,7 @@ class _TikTokCommentSectionState extends State<TikTokCommentSection> {
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.send),
+                  icon: const Icon(Icons.send),
                   onPressed: _addComment,
                 ),
               ],
