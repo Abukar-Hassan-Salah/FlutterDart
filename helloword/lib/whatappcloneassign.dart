@@ -396,6 +396,7 @@ class HomeScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+        
           actions: const [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
