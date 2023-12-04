@@ -316,76 +316,76 @@ class CallsScreen extends StatelessWidget {
   }
 }
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+// class SettingsScreen extends StatelessWidget {
+//   const SettingsScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 51, 44, 44),
-        title: const Text(
-          'Settings',
-          style: TextStyle(color: Colors.green),
-        ),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Open Popup Menu'),
-          onPressed: () {
-            _showPopupMenu(context);
-          },
-        ),
-      ),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         backgroundColor: const Color.fromARGB(255, 51, 44, 44),
+//         title: const Text(
+//           'Settings',
+//           style: TextStyle(color: Colors.green),
+//         ),
+//       ),
+//       body: Center(
+//         child: ElevatedButton(
+//           child: const Text('Open Popup Menu'),
+//           onPressed: () {
+//             _showPopupMenu(context);
+//           },
+//         ),
+//       ),
+//     );
+//   }
 
-  void _showPopupMenu(BuildContext context) {
-    final RenderBox button = context.findRenderObject() as RenderBox;
-    final RenderBox overlay =
-        Overlay.of(context)!.context.findRenderObject() as RenderBox;
-    // ignore: unused_local_variable
-    final RelativeRect position = RelativeRect.fromRect(
-      Rect.fromPoints(
-        button.localToGlobal(Offset.zero, ancestor: overlay),
-        button.localToGlobal(button.size.bottomRight(Offset.zero),
-            ancestor: overlay),
-      ),
-      Offset.zero & overlay.size,
-    );
+//   void _showPopupMenu(BuildContext context) {
+//     final RenderBox button = context.findRenderObject() as RenderBox;
+//     final RenderBox overlay =
+//         Overlay.of(context).context.findRenderObject() as RenderBox;
+//     // ignore: unused_local_variable
+//     final RelativeRect position = RelativeRect.fromRect(
+//       Rect.fromPoints(
+//         button.localToGlobal(Offset.zero, ancestor: overlay),
+//         button.localToGlobal(button.size.bottomRight(Offset.zero),
+//             ancestor: overlay),
+//       ),
+//       Offset.zero & overlay.size,
+//     );
 
-    final List<PopupMenuEntry<String>> menuItems = [
-      const PopupMenuItem<String>(
-        value: 'New Group',
-        child: Text('New Group'),
-      ),
-      const PopupMenuItem<String>(
-        value: 'New Broadcast',
-        child: Text('New Broadcast'),
-      ),
-      const PopupMenuItem<String>(
-        value: 'Linked Device',
-        child: Text('Linked Device'),
-      ),
-      const PopupMenuItem<String>(
-        value: 'Started Message',
-        child: Text('Started Message'),
-      ),
-    ];
+//     final List<PopupMenuEntry<String>> menuItems = [
+//       const PopupMenuItem<String>(
+//         value: 'New Group',
+//         child: Text('New Group'),
+//       ),
+//       const PopupMenuItem<String>(
+//         value: 'New Broadcast',
+//         child: Text('New Broadcast'),
+//       ),
+//       const PopupMenuItem<String>(
+//         value: 'Linked Device',
+//         child: Text('Linked Device'),
+//       ),
+//       const PopupMenuItem<String>(
+//         value: 'Started Message',
+//         child: Text('Started Message'),
+//       ),
+//     ];
 
-    showMenu<String>(
-      context: context,
-      position: RelativeRect.fill,
-      items: menuItems,
-    ).then((value) {
-      if (value != null) {
-        // Handle selected option
-        // ignore: avoid_print
-        print('Selected option: $value');
-      }
-    });
-  }
-}
+//     showMenu<String>(
+//       context: context,
+//       position: RelativeRect.fill,
+//       items: menuItems,
+//     ).then((value) {
+//       if (value != null) {
+//         // Handle selected option
+//         // ignore: avoid_print
+//         print('Selected option: $value');
+//       }
+//     });
+//   }
+// }
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -393,9 +393,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
+          actions: const [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Icon(Icons.camera_alt),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Icon(Icons.search),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Icon(Icons.more_vert),
+            ),
+          ],
           backgroundColor: const Color.fromARGB(255, 51, 44, 44),
           title: const Text('WhatsApp'),
           bottom: const TabBar(
@@ -403,7 +417,7 @@ class HomeScreen extends StatelessWidget {
               Tab(icon: Icon(Icons.chat)),
               Tab(icon: Icon(Icons.camera_alt)),
               Tab(icon: Icon(Icons.call)),
-              Tab(icon: Icon(Icons.settings)),
+              // Tab(icon: Icon(Icons.public)),
             ],
           ),
         ),
@@ -412,7 +426,7 @@ class HomeScreen extends StatelessWidget {
             ChatScreen(),
             StatusScreen(),
             CallsScreen(),
-            SettingsScreen(),
+            // SettingsScreen(),
           ],
         ),
       ),
