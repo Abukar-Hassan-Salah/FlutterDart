@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
+void main() {
+  runApp(
+    const MaterialApp(debugShowCheckedModeBanner: false, home: CommentAssign()),
+  );
+}
 
-class Comment extends StatelessWidget {
-  const Comment({super.key});
-  
-  get kInactiveCardColor => null;
+class CommentAssign extends StatelessWidget {
+  const CommentAssign({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kInactiveCardColor,
+      backgroundColor: const Color.fromARGB(255, 238, 172, 172),
       appBar: AppBar(
         backgroundColor: Colors.black,
-        leading: const Icon(Icons.live_tv_outlined),
+        leading: const Icon(Icons.live_tv_rounded),
         title: const Padding(
           padding: EdgeInsets.only(left: 40),
           child: Row(
@@ -29,7 +32,7 @@ class Comment extends StatelessWidget {
             ],
           ),
         ),
-        actions: const [Icon(Icons.search)],
+        actions: const [Icon(Icons.search_rounded)],
       ),
       body: Column(
         children: [
@@ -56,7 +59,7 @@ class Comment extends StatelessWidget {
                           child: IconButton(
                             onPressed: () {},
                             icon: const Icon(
-                              IconlyBold.addUser,
+                              IconlyBold.profile,
                               size: 35,
                               color: Colors.white,
                             ),
@@ -90,8 +93,44 @@ class Comment extends StatelessWidget {
                             borderRadius: BorderRadius.circular(35),
                           ),
                           child: IconButton(
+                            onPressed: () {},
                             icon: const Icon(
-                              Icons.comment,
+                              Icons.share,
+                              size: 35,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          height: 55,
+                          width: 65,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(35),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.favorite_border_sharp,
+                              size: 35,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          height: 55,
+                          width: 65,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(35),
+                          ),
+                          child: IconButton(
+                            icon: const Icon(
+                              Icons.more_horiz,
                               size: 30,
                               color: Colors.white,
                             ),
@@ -115,7 +154,7 @@ class Comment extends StatelessWidget {
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: [
-                                                  Text("50"),
+                                                  Text("680"),
                                                   SizedBox(
                                                     width: 5,
                                                   ),
@@ -131,12 +170,12 @@ class Comment extends StatelessWidget {
                                               child: ListView(
                                                 children: [
                                                   ListTile(
-                                                    leading:
-                                                        const CircleAvatar(
-                                                          backgroundImage: AssetImage("lib/assets/image 10.jpeg"),
-                                                        ),
+                                                    leading: const CircleAvatar(
+                                                      backgroundImage: AssetImage(
+                                                          'assets/bakar.jpg'),
+                                                    ),
                                                     title: const Text(
-                                                        "Ahmed mohamed "),
+                                                        "Abukar Hassan"),
                                                     subtitle: Column(
                                                       crossAxisAlignment:
                                                           CrossAxisAlignment
@@ -145,19 +184,17 @@ class Comment extends StatelessWidget {
                                                         // ignore: avoid_unnecessary_containers
                                                         Container(
                                                           child: const Text(
-                                                              "waan arkey ma ila aragtay"),
+                                                              "waaw waa arin layaab leh"),
                                                         ),
                                                         // ignore: avoid_unnecessary_containers
                                                         Container(
                                                           child: const Column(
                                                             children: [
-                                                              Text(
-                                                                  "10h    Reply"),
+                                                              Text("1h  ago"),
                                                               SizedBox(
                                                                 height: 2,
                                                               ),
-                                                              Text(
-                                                                  "-----View Reply")
+                                                              Text("View Reply")
                                                             ],
                                                           ),
                                                         ),
@@ -168,17 +205,20 @@ class Comment extends StatelessWidget {
                                                           CrossAxisAlignment
                                                               .start,
                                                       children: [
-                                                       Icon(Icons.favorite, color: Colors.red,),
+                                                        Icon(
+                                                          Icons.favorite,
+                                                          color: Colors.red,
+                                                        ),
                                                       ],
                                                     ),
                                                   ),
                                                   ListTile(
-                                                    leading:
-                                                        const CircleAvatar(
-                                                          backgroundImage: AssetImage("lib/assets/image 8.jpeg"),
-                                                        ),
+                                                    leading: const CircleAvatar(
+                                                      backgroundImage: AssetImage(
+                                                          'assets/in hassan.jpg'),
+                                                    ),
                                                     title: const Text(
-                                                        "Mohamed aiduros"),
+                                                        "Isse Hassan"),
                                                     subtitle: Column(
                                                       crossAxisAlignment:
                                                           CrossAxisAlignment
@@ -187,19 +227,17 @@ class Comment extends StatelessWidget {
                                                         // ignore: avoid_unnecessary_containers
                                                         Container(
                                                           child: const Text(
-                                                              "yah adina ma aragtay"),
+                                                              "waa sheeka kale arin kaan"),
                                                         ),
                                                         // ignore: avoid_unnecessary_containers
                                                         Container(
                                                           child: const Column(
                                                             children: [
-                                                              Text(
-                                                                  "9h    Reply"),
+                                                              Text("2h ago"),
                                                               SizedBox(
                                                                 height: 2,
                                                               ),
-                                                              Text(
-                                                                  "---------View Reply")
+                                                              Text("View Reply")
                                                             ],
                                                           ),
                                                         ),
@@ -210,17 +248,20 @@ class Comment extends StatelessWidget {
                                                           CrossAxisAlignment
                                                               .start,
                                                       children: [
-                                                       Icon(Icons.favorite, color: Colors.red,),
+                                                        Icon(
+                                                          Icons.favorite,
+                                                          color: Colors.red,
+                                                        ),
                                                       ],
                                                     ),
                                                   ),
                                                   ListTile(
-                                                    leading:
-                                                        const CircleAvatar(
-                                                          backgroundImage: AssetImage("lib/assets/image 16.jpeg"),
-                                                        ),
+                                                    leading: const CircleAvatar(
+                                                      backgroundImage: AssetImage(
+                                                          'assets/in hassan.jpg'),
+                                                    ),
                                                     title: const Text(
-                                                        "Mohamed Ahmed"),
+                                                        "Daud Hassan"),
                                                     subtitle: Column(
                                                       crossAxisAlignment:
                                                           CrossAxisAlignment
@@ -229,19 +270,17 @@ class Comment extends StatelessWidget {
                                                         // ignore: avoid_unnecessary_containers
                                                         Container(
                                                           child: const Text(
-                                                              "haa waan kula arkay"),
+                                                              "waa arin ka doodid u baahan"),
                                                         ),
                                                         // ignore: avoid_unnecessary_containers
                                                         Container(
                                                           child: const Column(
                                                             children: [
-                                                              Text(
-                                                                  "18h    Reply"),
+                                                              Text("8h  ago"),
                                                               SizedBox(
                                                                 height: 2,
                                                               ),
-                                                              Text(
-                                                                  "---------View Reply")
+                                                              Text("View Reply")
                                                             ],
                                                           ),
                                                         ),
@@ -252,17 +291,20 @@ class Comment extends StatelessWidget {
                                                           CrossAxisAlignment
                                                               .start,
                                                       children: [
-                                                       Icon(Icons.favorite, color: Colors.red,),
+                                                        Icon(
+                                                          Icons.favorite,
+                                                          color: Colors.red,
+                                                        ),
                                                       ],
                                                     ),
                                                   ),
                                                   ListTile(
-                                                    leading:
-                                                        const CircleAvatar(
-                                                          backgroundImage: AssetImage("lib/assets/image 3.jpeg"),
-                                                        ),
+                                                    leading: const CircleAvatar(
+                                                      backgroundImage: AssetImage(
+                                                          'assets/bakar.jpg'),
+                                                    ),
                                                     title: const Text(
-                                                        "Mohamed Ahmed"),
+                                                        "Mohamed Hassan"),
                                                     subtitle: Column(
                                                       crossAxisAlignment:
                                                           CrossAxisAlignment
@@ -271,19 +313,17 @@ class Comment extends StatelessWidget {
                                                         // ignore: avoid_unnecessary_containers
                                                         Container(
                                                           child: const Text(
-                                                              "Ok Wan Arkey"),
+                                                              "war hooy ka joog dhiqaa lugaha laguu gelinooyaa"),
                                                         ),
                                                         // ignore: avoid_unnecessary_containers
                                                         Container(
                                                           child: const Column(
                                                             children: [
-                                                              Text(
-                                                                  "18h    Reply"),
+                                                              Text("3h ago"),
                                                               SizedBox(
                                                                 height: 2,
                                                               ),
-                                                              Text(
-                                                                  "---------View Reply")
+                                                              Text("View Reply")
                                                             ],
                                                           ),
                                                         ),
@@ -294,8 +334,10 @@ class Comment extends StatelessWidget {
                                                           CrossAxisAlignment
                                                               .start,
                                                       children: [
-                                                        Icon(Icons.favorite, color: Colors.red,),
-                                                         
+                                                        Icon(
+                                                          Icons.favorite,
+                                                          color: Colors.red,
+                                                        ),
                                                       ],
                                                     ),
                                                   ),
@@ -407,7 +449,7 @@ class Comment extends StatelessWidget {
                                                                 const CircleAvatar(
                                                               backgroundImage:
                                                                   AssetImage(
-                                                                      "lib/assets/image 16.jpeg"),
+                                                                      'assets/hassan.jpg'),
                                                             ),
                                                           ),
                                                         ),
