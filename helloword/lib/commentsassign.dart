@@ -210,7 +210,7 @@ class _TikTokCommentCloneState extends State<TikTokCommentClone> {
 
 void main() {
   runApp(MaterialApp(
-    title: 'TikTok Comment Clone',
+    title: '',
     home: TikTokCommentClone(),
   ));
 }
