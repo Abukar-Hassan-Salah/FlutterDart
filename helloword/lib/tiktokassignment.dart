@@ -138,356 +138,380 @@ class CommentAssign extends StatelessWidget {
                             onPressed: () {
                               showModalBottomSheet(
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(18),
                                   ),
                                   context: context,
+                                  isScrollControlled: true,
                                   builder: (context) {
-                                    return SizedBox(
-                                      height: 500,
-                                      child: Column(
-                                        children: [
-                                          Expanded(
-                                            child: Container(
-                                              margin: const EdgeInsets.only(
-                                                  top: 10),
-                                              child: const Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text("680"),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Text("Comments")
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            flex: 7,
-                                            child: SizedBox(
-                                              height: 300,
-                                              child: ListView(
-                                                children: [
-                                                  ListTile(
-                                                    leading: const CircleAvatar(
-                                                      backgroundImage: AssetImage(
-                                                          'assets/bakar.jpg'),
+                                    return Padding(
+                                      padding: EdgeInsets.only(
+                                          bottom: MediaQuery.of(context)
+                                              .viewInsets
+                                              .bottom),
+                                      child: SizedBox(
+                                        height: 300,
+                                        child: Column(
+                                          children: [
+                                            Expanded(
+                                              child: Container(
+                                                margin: const EdgeInsets.only(
+                                                    top: 10),
+                                                child: const Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Text("680"),
+                                                    SizedBox(
+                                                      width: 5,
                                                     ),
-                                                    title: const Text(
-                                                        "Abukar Hassan"),
-                                                    subtitle: Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        // ignore: avoid_unnecessary_containers
-                                                        Container(
-                                                          child: const Text(
-                                                              "waaw waa arin layaab leh"),
-                                                        ),
-                                                        // ignore: avoid_unnecessary_containers
-                                                        Container(
-                                                          child: const Column(
-                                                            children: [
-                                                              Text("1h  ago"),
-                                                              SizedBox(
-                                                                height: 2,
-                                                              ),
-                                                              Text("View Reply")
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    trailing: const Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Icon(
-                                                          Icons.favorite,
-                                                          color: Colors.red,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  ListTile(
-                                                    leading: const CircleAvatar(
-                                                      backgroundImage: AssetImage(
-                                                          'assets/in hassan.jpg'),
-                                                    ),
-                                                    title: const Text(
-                                                        "Isse Hassan"),
-                                                    subtitle: Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        // ignore: avoid_unnecessary_containers
-                                                        Container(
-                                                          child: const Text(
-                                                              "waa sheeka kale arin kaan"),
-                                                        ),
-                                                        // ignore: avoid_unnecessary_containers
-                                                        Container(
-                                                          child: const Column(
-                                                            children: [
-                                                              Text("2h ago"),
-                                                              SizedBox(
-                                                                height: 2,
-                                                              ),
-                                                              Text("View Reply")
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    trailing: const Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Icon(
-                                                          Icons.favorite,
-                                                          color: Colors.red,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  ListTile(
-                                                    leading: const CircleAvatar(
-                                                      backgroundImage: AssetImage(
-                                                          'assets/in hassan.jpg'),
-                                                    ),
-                                                    title: const Text(
-                                                        "Daud Hassan"),
-                                                    subtitle: Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        // ignore: avoid_unnecessary_containers
-                                                        Container(
-                                                          child: const Text(
-                                                              "waa arin ka doodid u baahan"),
-                                                        ),
-                                                        // ignore: avoid_unnecessary_containers
-                                                        Container(
-                                                          child: const Column(
-                                                            children: [
-                                                              Text("8h  ago"),
-                                                              SizedBox(
-                                                                height: 2,
-                                                              ),
-                                                              Text("View Reply")
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    trailing: const Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Icon(
-                                                          Icons.favorite,
-                                                          color: Colors.red,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  ListTile(
-                                                    leading: const CircleAvatar(
-                                                      backgroundImage: AssetImage(
-                                                          'assets/bakar.jpg'),
-                                                    ),
-                                                    title: const Text(
-                                                        "Mohamed Hassan"),
-                                                    subtitle: Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        // ignore: avoid_unnecessary_containers
-                                                        Container(
-                                                          child: const Text(
-                                                              "war hooy ka joog dhiqaa lugaha laguu gelinooyaa"),
-                                                        ),
-                                                        // ignore: avoid_unnecessary_containers
-                                                        Container(
-                                                          child: const Column(
-                                                            children: [
-                                                              Text("3h ago"),
-                                                              SizedBox(
-                                                                height: 2,
-                                                              ),
-                                                              Text("View Reply")
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    trailing: const Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Icon(
-                                                          Icons.favorite,
-                                                          color: Colors.red,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 100,
-                                            child: Column(
-                                              children: [
-                                                Expanded(
-                                                  child: Container(
-                                                    child: Row(
-                                                      children: [
-                                                        Expanded(
-                                                          child: Container(
-                                                            child: const Text(
-                                                              "😅",
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          // ignore: avoid_unnecessary_containers
-                                                          child: Container(
-                                                            child: const Text(
-                                                              "😂",
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          // ignore: avoid_unnecessary_containers
-                                                          child: Container(
-                                                            child: const Text(
-                                                              "🤣",
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          // ignore: avoid_unnecessary_containers
-                                                          child: Container(
-                                                            child: const Text(
-                                                              "🤥",
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          // ignore: avoid_unnecessary_containers
-                                                          child: Container(
-                                                            child: const Text(
-                                                              "😓",
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          // ignore: avoid_unnecessary_containers
-                                                          child: Container(
-                                                            child: const Text(
-                                                              "😉",
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          child: Container(
-                                                            child: const Text(
-                                                              "😁",
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          child: Container(
-                                                            child: const Text(
-                                                              "💕",
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
+                                                    Text("Comments")
+                                                  ],
                                                 ),
-                                                Expanded(
-                                                  child: Container(
-                                                    child: Row(
-                                                      children: [
-                                                        Expanded(
-                                                          child: Container(
-                                                            decoration: BoxDecoration(
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            50)),
-                                                            child:
-                                                                const CircleAvatar(
-                                                              backgroundImage:
-                                                                  AssetImage(
-                                                                      'assets/hassan.jpg'),
+                                              ),
+                                            ),
+                                            Expanded(
+                                              flex: 7,
+                                              child: SizedBox(
+                                                height: 300,
+                                                child: ListView(
+                                                  children: [
+                                                    ListTile(
+                                                      leading:
+                                                          const CircleAvatar(
+                                                        backgroundImage: AssetImage(
+                                                            'assets/bakar.jpg'),
+                                                      ),
+                                                      title: const Text(
+                                                          "Abukar Hassan"),
+                                                      subtitle: Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          // ignore: avoid_unnecessary_containers
+                                                          Container(
+                                                            child: const Text(
+                                                                "waaw waa arin layaab leh"),
+                                                          ),
+                                                          // ignore: avoid_unnecessary_containers
+                                                          Container(
+                                                            child: const Column(
+                                                              children: [
+                                                                Text("1h  ago"),
+                                                                SizedBox(
+                                                                  height: 2,
+                                                                ),
+                                                                Text(
+                                                                    "View Reply")
+                                                              ],
                                                             ),
                                                           ),
-                                                        ),
-                                                        Expanded(
-                                                          flex: 5,
-                                                          child: Container(
-                                                            decoration: BoxDecoration(
-                                                                color: Colors
-                                                                    .grey[300],
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            25)),
-                                                            child:
-                                                                TextFormField(
-                                                              keyboardType:
-                                                                  TextInputType
-                                                                      .text,
-                                                              decoration:
-                                                                  const InputDecoration(
-                                                                contentPadding:
-                                                                    EdgeInsets.only(
-                                                                        left:
-                                                                            20),
-                                                                hintText:
-                                                                    "Add Comment",
+                                                        ],
+                                                      ),
+                                                      trailing: const Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.red,
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    ListTile(
+                                                      leading:
+                                                          const CircleAvatar(
+                                                        backgroundImage: AssetImage(
+                                                            'assets/in hassan.jpg'),
+                                                      ),
+                                                      title: const Text(
+                                                          "Isse Hassan"),
+                                                      subtitle: Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          // ignore: avoid_unnecessary_containers
+                                                          Container(
+                                                            child: const Text(
+                                                                "waa sheeka kale arin kaan"),
+                                                          ),
+                                                          // ignore: avoid_unnecessary_containers
+                                                          Container(
+                                                            child: const Column(
+                                                              children: [
+                                                                Text("2h ago"),
+                                                                SizedBox(
+                                                                  height: 2,
+                                                                ),
+                                                                Text(
+                                                                    "View Reply")
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      trailing: const Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.red,
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    ListTile(
+                                                      leading:
+                                                          const CircleAvatar(
+                                                        backgroundImage: AssetImage(
+                                                            'assets/in hassan.jpg'),
+                                                      ),
+                                                      title: const Text(
+                                                          "Daud Hassan"),
+                                                      subtitle: Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          // ignore: avoid_unnecessary_containers
+                                                          Container(
+                                                            child: const Text(
+                                                                "waa arin ka doodid u baahan"),
+                                                          ),
+                                                          // ignore: avoid_unnecessary_containers
+                                                          Container(
+                                                            child: const Column(
+                                                              children: [
+                                                                Text("8h  ago"),
+                                                                SizedBox(
+                                                                  height: 2,
+                                                                ),
+                                                                Text(
+                                                                    "View Reply")
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      trailing: const Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.red,
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    ListTile(
+                                                      leading:
+                                                          const CircleAvatar(
+                                                        backgroundImage: AssetImage(
+                                                            'assets/bakar.jpg'),
+                                                      ),
+                                                      title: const Text(
+                                                          "Mohamed Hassan"),
+                                                      subtitle: Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          // ignore: avoid_unnecessary_containers
+                                                          Container(
+                                                            child: const Text(
+                                                                "war hooy ka joog dhiqaa lugaha laguu gelinooyaa"),
+                                                          ),
+                                                          // ignore: avoid_unnecessary_containers
+                                                          Container(
+                                                            child: const Column(
+                                                              children: [
+                                                                Text("3h ago"),
+                                                                SizedBox(
+                                                                  height: 2,
+                                                                ),
+                                                                Text(
+                                                                    "View Reply")
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      trailing: const Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.red,
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 100,
+                                              child: Column(
+                                                children: [
+                                                  Expanded(
+                                                    child: Container(
+                                                      child: Row(
+                                                        children: [
+                                                          Expanded(
+                                                            child: Container(
+                                                              child: const Text(
+                                                                "😅",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        30),
                                                               ),
                                                             ),
                                                           ),
-                                                        ),
-                                                      ],
+                                                          Expanded(
+                                                            // ignore: avoid_unnecessary_containers
+                                                            child: Container(
+                                                              child: const Text(
+                                                                "😂",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        30),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            // ignore: avoid_unnecessary_containers
+                                                            child: Container(
+                                                              child: const Text(
+                                                                "🤣",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        30),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            // ignore: avoid_unnecessary_containers
+                                                            child: Container(
+                                                              child: const Text(
+                                                                "🤥",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        30),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            // ignore: avoid_unnecessary_containers
+                                                            child: Container(
+                                                              child: const Text(
+                                                                "😓",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        30),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            // ignore: avoid_unnecessary_containers
+                                                            child: Container(
+                                                              child: const Text(
+                                                                "😉",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        30),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Container(
+                                                              child: const Text(
+                                                                "😁",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        30),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Container(
+                                                              child: const Text(
+                                                                "💕",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        30),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
                                                     ),
                                                   ),
-                                                )
-                                              ],
+                                                  Expanded(
+                                                    child: Container(
+                                                      child: Row(
+                                                        children: [
+                                                          Expanded(
+                                                            child: Container(
+                                                              decoration: BoxDecoration(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              50)),
+                                                              child:
+                                                                  const CircleAvatar(
+                                                                backgroundImage:
+                                                                    AssetImage(
+                                                                        'assets/hassan.jpg'),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            flex: 5,
+                                                            child: Container(
+                                                              decoration: BoxDecoration(
+                                                                  color: Colors
+                                                                          .grey[
+                                                                      300],
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              25)),
+                                                              child:
+                                                                  TextFormField(
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .text,
+                                                                decoration:
+                                                                    const InputDecoration(
+                                                                  contentPadding:
+                                                                      EdgeInsets.only(
+                                                                          left:
+                                                                              20),
+                                                                  hintText:
+                                                                      "Add Comment",
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     );
                                   });
